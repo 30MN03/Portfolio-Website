@@ -7,56 +7,25 @@
 
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: #f8f9fa;
-    color: #333;
-}
-
-/* Header Styles */
-.header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-}
-
-.header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.title {
-    font-size: 2rem;
-}
-
-.main-nav ul {
-    list-style-type: none;
-}
-
-.main-nav ul li {
-    display: inline-block;
-    margin-left: 20px;
-}
-
-.main-nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    transition: color 0.3s ease;
-}
-
-.main-nav ul li a:hover {
-    color: #ffd700;
+    background-color: #222;
+    color: white;
 }
 
 /* Sidebar Styles */
 .sidebar {
     position: fixed;
-    top: 0;
-    left: -250px; /* Initially hidden */
-    width: 150px;
+    top: 50%; /* Center the sidebar vertically */
+    transform: translateY(-50%); /* Adjust for vertical centering */
+    width: 120px;
     height: 100vh;
-    background-color: #555;
+    background-color: #1e1e1e;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Box shadow for glass effect */
     transition: left 0.3s ease;
     z-index: 999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the content vertically within the sidebar */
+    align-items: center; /* Center the content horizontally within the sidebar */
 }
 
 .side-nav {
@@ -74,24 +43,36 @@ body {
 .side-nav ul li a {
     display: block;
     padding: 10px 20px;
-    color: #fff;
+    color: white;
+    text-align: right;
     text-decoration: none;
     transition: background-color 0.3s;
 }
 
 .side-nav ul li a:hover {
-    color: #ffd700;
+    color: gold;
 }
 
-/* Show sidebar when scrolled past header */
-.header.scrolled + .sidebar {
-    left: 0;
+#icon {
+    width: 30px;
+    height: auto;
 }
-
 
 /* Section Styles */
 .section {
-    padding: 80px 0;
+    padding: 60px 0 60px 120px;
+}
+
+@media screen and (max-width: 768px) {
+    .section {
+        padding-left: 120px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .section {
+        padding-left: 140px;
+    }
 }
 
 .container {
@@ -103,19 +84,19 @@ body {
 h2 {
     font-size: 2.5rem;
     margin-bottom: 30px;
-    text-align: center;
+    text-align: left;
 }
 
 h3 {
     font-size: 1.5rem;
     margin-bottom: 20px;
-    text-align: center;
+    text-align: left;
 }
 
 p {
     font-size: 1.1rem;
     line-height: 1.6;
-    text-align: center;
+    text-align: left;
 }
 
 /* Portfolio Gallery Styles */
@@ -167,57 +148,38 @@ p {
 }
 
 .overlay h3, .overlay p {
-    color: #fff;
+    color: white;
 }
 
 .overlay p {
     margin-top: 10px;
 }
 
-/* Contact Form Styles */
-#contact-form {
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-#contact-form input[type="text"],
-#contact-form input[type="email"],
-#contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box; /* Ensure padding and border are included in width */
-}
-
-#contact-form textarea {
-    height: 150px; /* Set height for textarea */
-}
-
-#contact-form button {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-#contact-form button:hover {
-    color: #ffd700;
-}
-
 /* Footer Styles */
 footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
+    background-color: #111;
+    color: white;
+    text-align: left;
+    padding: 0;
+    position: fixed;
+    bottom: 0;
+    left: 120px;
+    width: calc(100% - 120px);
+    z-index: 999;
+}
+
+@media screen and (max-width: 768px) {
+    footer {
+        left: 120px;
+        width: calc(100% - 100px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    footer {
+        left: 140px;
+        width: calc(100% - 100px);
+    }
 }
 
 footer p {
