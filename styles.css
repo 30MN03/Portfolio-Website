@@ -1,187 +1,217 @@
 /* Reset and Base Styles */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: #222;
-    color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  background-color: #222;
+  color: white;
 }
 
 /* Sidebar Styles */
 .sidebar {
-    position: fixed;
-    top: 50%; /* Center the sidebar vertically */
-    transform: translateY(-50%); /* Adjust for vertical centering */
-    width: 120px;
-    height: 100vh;
-    background-color: #1e1e1e;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Box shadow for glass effect */
-    transition: left 0.3s ease;
-    z-index: 999;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Center the content vertically within the sidebar */
-    align-items: center; /* Center the content horizontally within the sidebar */
+  position: fixed;
+  top: 50%; /* Center the sidebar vertically */
+  transform: translateY(-50%); /* Adjust for vertical centering */
+  width: 120px;
+  height: 100vh;
+  background-color: #1e1e1e (0, 0, 0, 0.5);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Box shadow for glass effect */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center the content vertically within the sidebar */
+  align-items: center; /* Center the content horizontally within the sidebar */
 }
 
 .side-nav {
-    margin-top: 30px; /* Adjust based on header height */
+  margin-top: 30px; /* Adjust based on header height */
 }
 
 .side-nav ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 .side-nav ul li {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .side-nav ul li a {
-    display: block;
-    padding: 10px 20px;
-    color: white;
-    text-align: right;
-    text-decoration: none;
-    transition: background-color 0.3s;
+  display: block;
+  padding: 10px 20px;
+  color: white;
+  text-align: right;
+  text-decoration: none;
 }
 
 .side-nav ul li a:hover {
-    color: gold;
+  color: gold;
+}
+
+.sidebar div {
+  position: absolute;
+  bottom: 5px;
+}
+
+.sidebar div a {
+  display: inline-block;
+  margin-right: 0;
+}
+
+.sidebar div a:last-child {
+  margin-right: 0;
 }
 
 #icon {
-    width: 30px;
-    height: auto;
+  width: 30px;
+  height: auto;
 }
 
 /* Section Styles */
 .section {
-    padding: 60px 0 60px 120px;
+  padding: 60px 0 60px 120px;
 }
 
 @media screen and (max-width: 768px) {
-    .section {
-        padding-left: 120px;
-    }
+  .section {
+    padding-left: 120px;
+  }
 }
 
 @media screen and (max-width: 480px) {
-    .section {
-        padding-left: 140px;
-    }
+  .section {
+    padding-left: 140px;
+  }
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 h2 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    text-align: left;
+  font-size: 2.5rem;
+  color: gold;
+  margin-bottom: 30px;
+  text-align: left;
 }
 
 h3 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    text-align: left;
+  font-size: 1.5rem;
+  color: silver;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+h4 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  text-align: left;
 }
 
 p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    text-align: left;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+ul {
+  font-size: 1.1rem;
+  margin-left: 20px;
+  list-style-type: "— ";
 }
 
 /* Portfolio Gallery Styles */
 .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .portfolio-item {
-    position: relative;
-    margin-bottom: 40px;
-    cursor: pointer;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+  position: relative;
+  margin-bottom: 40px;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
 .portfolio-item img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
 }
 
 .portfolio-item:hover img {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.6);
-    opacity: 0;
-    transition: opacity 0.3s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .portfolio-item:hover .overlay {
-    opacity: 1;
+  opacity: 1;
 }
 
-.overlay h3, .overlay p {
-    color: white;
+.overlay h3,
+.overlay p {
+  color: white;
 }
 
 .overlay p {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 /* Footer Styles */
 footer {
-    background-color: #111;
-    color: white;
-    text-align: left;
-    padding: 0;
-    position: fixed;
-    bottom: 0;
-    left: 120px;
-    width: calc(100% - 120px);
-    z-index: 999;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  position: fixed;
+  bottom: 0;
+  left: 120px;
+  height: 45px;
+  width: calc(100% - 120px);
+  z-index: 999;
 }
 
 @media screen and (max-width: 768px) {
-    footer {
-        left: 120px;
-        width: calc(100% - 100px);
-    }
+  footer {
+    left: 120px;
+    width: calc(100% - 100px);
+  }
 }
 
 @media screen and (max-width: 480px) {
-    footer {
-        left: 140px;
-        width: calc(100% - 100px);
-    }
+  footer {
+    left: 140px;
+    width: calc(100% - 100px);
+  }
 }
 
 footer p {
-    margin: 0;
+  margin: 0;
 }
