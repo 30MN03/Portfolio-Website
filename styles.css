@@ -102,13 +102,19 @@ h2 {
 
 h3 {
   font-size: 1.5rem;
-  color: silver;
   margin-bottom: 20px;
   text-align: left;
 }
 
 h4 {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+h5 {
   font-size: 1.2rem;
+  color: lightgoldenrodyellow;
   margin-bottom: 20px;
   text-align: left;
 }
@@ -117,6 +123,36 @@ p {
   font-size: 1.1rem;
   line-height: 1.6;
   text-align: left;
+}
+
+.combined-Holibob::after {
+  content: "Feb 2022 – Aug 2022";
+  font-size: 1rem;
+  color: silver;
+}
+
+.combined-DMU::after {
+  content: "Sep 2018 – Sep 2021";
+  font-size: 1rem;
+  color: silver;
+}
+
+.combined-Gateway::after {
+  content: "Sep 2016 – Jun 2018 ";
+  font-size: 1rem;
+  color: silver;
+}
+
+.combined-QE::after {
+  content: "Sep 2015 – Jun 2016";
+  font-size: 1rem;
+  color: silver;
+}
+
+.combined-Rushey::after {
+  content: "Sep 2011 – Jun 2015";
+  font-size: 1rem;
+  color: silver;
 }
 
 ul {
