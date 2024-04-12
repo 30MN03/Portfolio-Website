@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body>
+
+  <div id="sidebar"></div>
+  <script>
+    fetch('../components/sidebar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('sidebar').innerHTML = data;
+      });
+  </script>
+
+<button id="mode-toggle" onclick="toggleDarkMode()">
+  <span class="slider"></span>
+</button>
+
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About Me</h2>
+      <h3>Junior Software Developer</h3>
+      <p>
+        Hi, this is Mishal. I am a graduate in Computer Science having
+        attended De Montfort University where I achieved first class
+        honours in my Computer Science degree. Here you'll find a portfolio
+        of some of my work. I hope you enjoy them!
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Mishal Nanalal. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+
+</html>

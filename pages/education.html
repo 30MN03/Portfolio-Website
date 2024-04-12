@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Education</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<div id="sidebar"></div>
+<script>
+  fetch('../components/sidebar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('sidebar').innerHTML = data;
+    });
+</script>
+
+<button id="mode-toggle" onclick="toggleDarkMode()">
+  <span class="slider"></span>
+</button>
+
+<section id="education" class="section">
+  <div class="container">
+    <h2>Education</h2>
+    <h3 class="combined-DMU">De Montfort University | </h3>
+    <h5>Bachelor of Science</h5>
+    <p>Computer Science</p>
+    <br>
+    <br>
+    <br>
+    <h3 class="combined-Gateway">Gateway College | </h3>
+    <h5>BTEC Level 3 Diploma</h5>
+    <p>Information Technology</p>
+    <br>
+    <br>
+    <br>
+    <h3 class="combined-QE">Wyggeston & Queen Elizabeth I College | </h3>
+    <h5>AS Level</h5>
+    <p>Design and Applied Arts</p>
+    <br>
+    <br>
+    <br>
+    <h3 class="combined-Rushey">Rushey Mead Secondary School | </h3>
+    <h5>GCSEs</h5>
+    <ul>
+      <li>English Language</li>
+      <li>English Literature</li>
+      <li>Mathematics</li>
+      <li>Science</li>
+      <li>Additional Science</li>
+      <li>Product Design</li>
+      <li>Religious Studies</li>
+      <li>Geography</li>
+      <li>Computing</li>
+      <li>French</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2024 Mishal Nanalal. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="../script.js"></script>
+</body>
+
+</html>

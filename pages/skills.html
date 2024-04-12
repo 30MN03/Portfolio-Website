@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skills</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<div id="sidebar"></div>
+<script>
+  fetch('../components/sidebar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('sidebar').innerHTML = data;
+    });
+</script>
+
+<button id="mode-toggle" onclick="toggleDarkMode()">
+  <span class="slider"></span>
+</button>
+
+<section id="skills" class="section">
+  <div class="container">
+    <h2>Skills</h2>
+    <h3>Personal</h3>
+    <p>Integrity, professional, communications, relationships, motivated, proactive, dynamic, enterprising - innovation
+      - and solution oriented,
+      strategic, creative, analytical, collaborative & autonomous working, organisational-task-time-quality-risk
+      management, detail & broad view oriented,
+      lifelong knowledge acquisition – sharing – and application.</p>
+    <br>
+    <p>English [native], Guajarati [good], Portuguese [basic] – and keen to learn others whilst immersed.</p>
+    <br>
+    <br>
+    <br>
+    <h3>Technical</h3>
+    <p>Java, JavaScript, PHP, HTML, Scala, Kotlin, Google Firebase, SQL, Confluence, Jira, GraphQL, AWS, Android, Linux,
+      Agile Methodology</p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2024 Mishal Nanalal. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="../script.js"></script>
+</body>
+
+</html>

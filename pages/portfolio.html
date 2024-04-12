@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<div id="sidebar"></div>
+<script>
+  fetch('../components/sidebar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('sidebar').innerHTML = data;
+    });
+</script>
+
+<button id="mode-toggle" onclick="toggleDarkMode()">
+  <span class="slider"></span>
+</button>
+
+<section id="portfolio" class="section">
+  <div class="container">
+    <h2>Portfolio</h2>
+    <div class="gallery">
+      <!-- Add your portfolio items here -->
+      <div class="portfolio-item">
+        <img src="project1.jpg" alt="Project 1" />
+        <div class="overlay">
+          <h3>Project 1</h3>
+          <p>Description of Project 1</p>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="project2.jpg" alt="Project 2" />
+        <div class="overlay">
+          <h3>Project 2</h3>
+          <p>Description of Project 2</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2024 Mishal Nanalal. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="../script.js"></script>
+</body>
+
+</html>

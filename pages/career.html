@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Career</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<div id="sidebar"></div>
+<script>
+  fetch('../components/sidebar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('sidebar').innerHTML = data;
+    });
+</script>
+
+<button id="mode-toggle" onclick="toggleDarkMode()">
+  <span class="slider"></span>
+</button>
+
+<section id="career" class="section">
+  <div class="container">
+    <h2>Career</h2>
+    <h3 class="combined-Holibob">Holibob | </h3>
+    <h5>Junior Software Developer Internship</h5>
+    <ul>
+      <li>Active involvement in the delivery of software; including estimation, planning and releases.</li>
+      <li>Active involvement in the design and development of applications (DB, API, UI).</li>
+      <li>Worked with Node and React in a serverless AWS infrastructure.</li>
+      <li>Compiled, maintained systems’ documentation using tools such as Confluence, Jira and GraphQL Introspection.
+      </li>
+      <li>Collaborative work within a team of engineers ranging from intern to senior architects.</li>
+      <li>Worked with product managers and internal business stakeholders, and the CTO to define requirements and plans.
+      </li>
+      <li>Helped in fostering an agile engineering culture that best fit the company’s growing size, velocity and
+        culture.</li>
+    </ul>
+  </div>
+</section>
+<footer>
+  <div class="container">
+    <p>&copy; 2024 Mishal Nanalal. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="../script.js"></script>
+</body>
+
+</html>
